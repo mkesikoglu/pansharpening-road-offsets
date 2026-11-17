@@ -1,0 +1,5 @@
+chip,product,prod_p_ok,prod_m_ok,ref_p_ok,ref_m_ok,prod_reason,ref_reason,common_side
+C02_10300100E291D100,MTF_GLP_HPM,False,False,True,True,low_cnr;low_cnr,,none
+C05_10300100E3154100,EXP,False,False,True,True,lost_marker;low_cnr,,none
+C10_10300100E3154100,BDSD_PC,False,False,True,True,lost_marker;lost_marker,,none
+C10_10300100E3154100,AWLP,False,False,True,True,lost_marker;lost_marker,,none

@@ -1,0 +1,5 @@
+unit,product,k,label
+C13_10300100E291D100/R00,MTF_GLP_HPM,3,(c) other edge pair
+C09_10300100E291D100/R00,MTF_GLP_HPM,2,(d) line change
+C01_10300100E291D100/R00,VIS,2,(e) low contrast
+C01_10300100E3154100/R00,MTF_GLP_HPM,2,(f) not tracked

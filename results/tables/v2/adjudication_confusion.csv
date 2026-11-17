@@ -1,0 +1,5 @@
+rater1,same_physical_edge,different_physical_edge,invalid_tracking,ambiguous
+same_physical_edge,6,0,0,0
+different_physical_edge,4,84,0,0
+invalid_tracking,0,0,0,0
+ambiguous,0,0,0,0

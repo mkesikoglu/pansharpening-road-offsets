@@ -1,0 +1,5 @@
+,adjudication_rater1,adjudication_rater2,adjudication_consensus
+same_physical_edge,6,10,6
+different_physical_edge,88,84,88
+invalid_tracking,0,0,0
+ambiguous,0,0,0

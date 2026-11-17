@@ -1,0 +1,9 @@
+product,different edge pair,"same pair, line position change",events,measured_pairs
+PAN,10,4,14,87
+EXP,9,0,9,102
+GSA,5,2,7,87
+BDSD_PC,13,4,17,85
+MTF_GLP_HPM,13,3,16,63
+AWLP,13,0,13,88
+ZPNN,3,2,5,75
+VIS,11,2,13,77

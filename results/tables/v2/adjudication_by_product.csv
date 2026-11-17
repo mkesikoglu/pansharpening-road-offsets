@@ -1,0 +1,9 @@
+product,same_physical_edge,different_physical_edge,invalid_tracking,ambiguous
+AWLP,0,13,0,0
+BDSD_PC,1,16,0,0
+EXP,0,9,0,0
+GSA,0,7,0,0
+MTF_GLP_HPM,2,14,0,0
+PAN,1,13,0,0
+VIS,2,11,0,0
+ZPNN,0,5,0,0
