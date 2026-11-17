@@ -1,0 +1,39 @@
+metric,product,n,N,n_crossings,estimate,lo,hi,p,note
+acceptance_pct,PAN,119.0,228.0,57.0,52.19298245614035,39.473684210526315,65.35087719298247,,all k; 95% CI crossing bootstrap
+acceptance_pct,ZPNN,117.0,228.0,57.0,51.31578947368421,39.473684210526315,62.71929824561403,,all k; 95% CI crossing bootstrap
+acceptance_pct,LPNN,116.0,228.0,57.0,50.877192982456144,39.03508771929825,62.71929824561403,,all k; 95% CI crossing bootstrap
+acceptance_diff_pp_vs_PAN,LPNN,,,57.0,-1.3157894736842035,-10.098684210526319,7.467105263157836,0.789,percentage points; bootstrap p
+acceptance_diff_pp_vs_ZPNN,LPNN,,,57.0,-0.43859649122807154,-5.263157894736842,3.9473684210526327,0.923,percentage points; bootstrap p
+failure_count,PAN,119.0,228.0,,119.0,,,,measured
+failure_count,PAN,100.0,228.0,,100.0,,,,low contrast
+failure_count,PAN,9.0,228.0,,9.0,,,,edge not tracked
+failure_count,ZPNN,117.0,228.0,,117.0,,,,measured
+failure_count,ZPNN,98.0,228.0,,98.0,,,,low contrast
+failure_count,ZPNN,13.0,228.0,,13.0,,,,edge not tracked
+failure_count,LPNN,116.0,228.0,,116.0,,,,measured
+failure_count,LPNN,106.0,228.0,,106.0,,,,low contrast
+failure_count,LPNN,6.0,228.0,,6.0,,,,edge not tracked
+median_abs_err_k_gt0_m,PAN,87.0,,30.0,0.5483260203328264,0.2809574661951792,0.9408099923318028,,accepted attempts
+median_abs_err_k_gt0_m,ZPNN,87.0,,33.0,0.4227542136531204,0.2490317136550097,0.8131125513728827,,accepted attempts
+median_abs_err_k_gt0_m,LPNN,84.0,,31.0,0.3665941025258983,0.27524831127602223,0.5731894108731419,,accepted attempts
+median_abs_err_common9_m,PAN,50.0,,20.0,0.4176762592992511,0.2687104428264142,0.7385004493804832,,attempts accepted by all nine products (eight-product set n=52)
+median_abs_err_common9_m,EXP,50.0,,20.0,0.6470882703592179,0.383251268862951,1.0909477034715995,,attempts accepted by all nine products (eight-product set n=52)
+median_abs_err_common9_m,GSA,50.0,,20.0,0.4825829593027944,0.22067811653607788,1.005482254684198,,attempts accepted by all nine products (eight-product set n=52)
+median_abs_err_common9_m,BDSD_PC,50.0,,20.0,0.5340651538889734,0.2988701763193964,1.0555331443937201,,attempts accepted by all nine products (eight-product set n=52)
+median_abs_err_common9_m,MTF_GLP_HPM,50.0,,20.0,0.4844456677062643,0.3306424868400539,1.0016530009186546,,attempts accepted by all nine products (eight-product set n=52)
+median_abs_err_common9_m,AWLP,50.0,,20.0,0.7282210319399383,0.36468144958820226,1.0037405048629329,,attempts accepted by all nine products (eight-product set n=52)
+median_abs_err_common9_m,ZPNN,50.0,,20.0,0.412719018859697,0.1694347285704136,1.0473217642998385,,attempts accepted by all nine products (eight-product set n=52)
+median_abs_err_common9_m,VIS,50.0,,20.0,0.7039994534822307,0.2529901613305974,1.2334446118842357,,attempts accepted by all nine products (eight-product set n=52)
+median_abs_err_common9_m,LPNN,50.0,,20.0,0.45170820478898,0.285558556347131,0.9885172203768081,,attempts accepted by all nine products (eight-product set n=52)
+paired_abs_err_diff_vs_PAN_m,LPNN,73.0,,27.0,0.011323829491932835,-0.08126742565461098,0.10033145966008296,0.9528931677341461,median over crossings of mean(|e|LPNN-|e|PAN); Wilcoxon p; 48.1% of crossings better
+paired_abs_err_diff_vs_ZPNN_m,LPNN,80.0,,31.0,-0.01862713585918131,-0.07563341199420412,0.08342864201404154,0.7793471785262227,median over crossings of mean(|e|LPNN-|e|ZPNN); Wilcoxon p; 51.6% of crossings better
+median_baseline_corrected_err_m,PAN,87.0,,30.0,0.002468778573311,0.0003014239129350776,0.0136045332031549,,"k>0 accepted and k=0 accepted, same product"
+pct_baseline_corrected_gt_0p5m,PAN,14.0,87.0,30.0,16.091954022988507,4.761904761904762,28.41314935064933,,share of paired attempts with deviation > 0.5 m
+median_baseline_corrected_err_m,ZPNN,75.0,,27.0,0.0046470162634086,0.001993404924506,0.0162368184992356,,"k>0 accepted and k=0 accepted, same product"
+pct_baseline_corrected_gt_0p5m,ZPNN,5.0,75.0,27.0,6.666666666666667,0.0,17.11096491228067,,share of paired attempts with deviation > 0.5 m
+median_baseline_corrected_err_m,LPNN,81.0,,29.0,0.011313412132235356,0.0027181893476195818,0.06993801661967947,,"k>0 accepted and k=0 accepted, same product"
+pct_baseline_corrected_gt_0p5m,LPNN,11.0,81.0,29.0,13.580246913580247,3.702574525745257,26.25,,share of paired attempts with deviation > 0.5 m
+runtime_s_per_chip,LPNN,228.0,,,148.84023475646973,147.09623402357101,150.52183747291565,,"median and IQR; 1024 x 1024 PAN chip, RTX 2060 6 GB, 100 iterations"
+runtime_s_per_chip,LPNN WV2,148.0,,,150.02160263061523,148.76488530635834,150.94869124889374,,median and IQR
+runtime_s_per_chip,LPNN WV3,80.0,,,147.17908251285553,146.81888449192047,147.79217714071274,,median and IQR
+runtime_s_per_chip,ZPNN,,,,55.87398841085225,,,,results/tables/runtime.csv (mean)

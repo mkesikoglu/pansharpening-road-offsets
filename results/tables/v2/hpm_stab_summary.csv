@@ -1,0 +1,51 @@
+metric,product,n,N,value,lo,hi,note
+repro_luminance_max_abs_diff,MTF_GLP_HPM,228,228,0.0,,,recomputed vs data/processed/fused; n = chips with identical luminance
+repro_measurement_ok_agree,MTF_GLP_HPM,228,228,1.0,,,
+repro_measurement_max_abs_dH,MTF_GLP_HPM,194,228,7.105427357601002e-15,,,
+acceptance_pct,MTF_GLP_HPM,103,228,45.17543859649123,34.21052631578947,56.58991228070169,
+acceptance_pct,MTF_GLP_HPM_stab,103,228,45.17543859649123,33.33333333333333,56.57894736842105,
+acceptance_diff_pp_stab_minus_hpm,,228,228,0.0,-2.2039473684210584,1.7543859649122806,
+acceptance_2x2,"HPM=ok,HPM*=ok",100,228,,,,
+acceptance_2x2,"HPM=ok,HPM*=fail",3,228,,,,
+acceptance_2x2,"HPM=fail,HPM*=ok",3,228,,,,
+acceptance_2x2,"HPM=fail,HPM*=fail",122,228,,,,
+failure_reason,MTF_GLP_HPM,109,228,,,,low contrast
+failure_reason,MTF_GLP_HPM,103,228,,,,measured
+failure_reason,MTF_GLP_HPM,16,228,,,,edge not tracked
+failure_reason,MTF_GLP_HPM_stab,106,228,,,,low contrast
+failure_reason,MTF_GLP_HPM_stab,103,228,,,,measured
+failure_reason,MTF_GLP_HPM_stab,19,228,,,,edge not tracked
+median_abs_err_k>0_jointly_accepted,MTF_GLP_HPM,75,171,0.5274129544550958,0.448365647823012,0.8697493183558866,
+median_abs_err_k>0_jointly_accepted,MTF_GLP_HPM_stab,75,171,0.551551698517263,0.3874879438186547,0.8482982746895813,
+median_abs_err_diff_stab_minus_hpm_jointly,,75,171,0.0,-1.3457611203193665e-07,0.0,
+median_inc_abs_err_k>0,MTF_GLP_HPM,63,171,0.007884168361942834,0.0006990826126278549,0.14897538815079336,
+share_inc_dev_gt_0.5m_pct,MTF_GLP_HPM,16,63,25.396825396825395,10.76923076923077,41.935483870967744,
+median_inc_abs_err_k>0,MTF_GLP_HPM_stab,64,171,0.004473718149136996,0.0006338522944879799,0.07644904145601217,
+share_inc_dev_gt_0.5m_pct,MTF_GLP_HPM_stab,14,64,21.875,7.936507936507936,39.0625,
+median_inc_abs_err_k>0_joint,MTF_GLP_HPM,73,171,0.04148558769057242,0.0010953738199166452,0.9145107663103993,
+share_inc_dev_gt_0.5m_pct_joint,MTF_GLP_HPM,26,73,35.61643835616438,19.718309859154928,54.666666666666664,
+median_inc_abs_err_k>0_joint,MTF_GLP_HPM_stab,73,171,0.015725359316784093,0.000712835918748489,0.16836866907597514,
+share_inc_dev_gt_0.5m_pct_joint,MTF_GLP_HPM_stab,23,73,31.506849315068493,15.064915150276017,49.29625699401891,
+share_inc_dev_gt_0.5m_diff_pp_joint_stab_minus_hpm,,73,171,-4.10958904109589,-9.333333333333332,0.0,
+median_inc_abs_err_diff_joint_stab_minus_hpm,,73,171,0.0,0.0,0.0,
+paired_median_abs_dH_all_k,,100,228,1.310836523771286e-07,0.0,0.000262176245450972,
+paired_share_abs_dH_gt_0.5m_pct,,3,100,3.0,0.0,6.741573033707865,
+paired_share_abs_dH_eq_0_pct,,43,100,43.0,,,
+paired_median_abs_dH_k>0,,75,171,1.2759119272232056e-07,0.0,1.3483236398288094e-05,
+floor_ms_R_pct_mean,,228,228,0.009744627433910705,0.0,0.10786056518554688,"lo = median over chips, hi = max over chips"
+floor_pan_R_pct_mean,,228,228,2.45660522527862,0.000762939453125,18.258953094482422,"lo = median over chips, hi = max over chips"
+floor_panlp_R_pct_mean,,228,228,1.5702180695115475,0.0,17.98105239868164,"lo = median over chips, hi = max over chips"
+floor_any_R_pct_mean,,228,228,2.600583277250591,0.000762939453125,19.251346588134766,"lo = median over chips, hi = max over chips"
+floor_ms_G_pct_mean,,228,228,0.005216347543816818,0.0,0.0576019287109375,"lo = median over chips, hi = max over chips"
+floor_pan_G_pct_mean,,228,228,0.7132279245476973,0.0,9.501934051513672,"lo = median over chips, hi = max over chips"
+floor_panlp_G_pct_mean,,228,228,0.30281627387331245,0.0,4.979896545410156,"lo = median over chips, hi = max over chips"
+floor_any_G_pct_mean,,228,228,0.7381259349354526,0.0,9.711265563964844,"lo = median over chips, hi = max over chips"
+floor_ms_B_pct_mean,,228,228,0.023125765616433664,0.000286102294921875,0.2743721008300781,"lo = median over chips, hi = max over chips"
+floor_pan_B_pct_mean,,228,228,4.000746576409591,0.015783309936523438,19.0673828125,"lo = median over chips, hi = max over chips"
+floor_panlp_B_pct_mean,,228,228,2.972100910387541,0.000762939453125,18.60513687133789,"lo = median over chips, hi = max over chips"
+floor_any_B_pct_mean,,228,228,4.27956832082648,0.018024444580078125,19.890117645263672,"lo = median over chips, hi = max over chips"
+floor_any_RGBmean_pct_mean,,228,228,2.5394258443375084,0.012636184692382812,14.063485463460287,"lo = median over chips, hi = max over chips"
+floor_any_allbands_pct_mean,,228,228,4.840835981201707,5.198758840560913,13.187944889068604,"lo = median over chips, hi = max over chips"
+luminance_median_abs_diff_stab_vs_hpm,,228,228,0.0,0.0,0.08428955078125,per-chip median; lo/hi = min/max over chips
+luminance_max_hpm,,228,228,20159.3564453125,1704.3394775390625,219380992.0,per-chip maximum; value = median over chips
+luminance_max_stab,,228,228,18423.4912109375,1517.599609375,375081.625,per-chip maximum; value = median over chips
