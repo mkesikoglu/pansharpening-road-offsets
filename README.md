@@ -1,0 +1,98 @@
+# Pansharpening and coseismic offset measurement (2023 Kahramanmaraş earthquake)
+
+Code and processed data for the study of how pansharpening affects strike-slip
+offsets measured on roads and other linear markers in post-event WorldView-2/3
+imagery (Maxar Open Data ARD), using controlled synthetic dislocations with
+exact truth and field measurements of DuRoss et al. (2024).
+
+## Contents of this repository
+
+This repository accompanies the manuscript submitted to the ISPRS Journal of
+Photogrammetry and Remote Sensing. It contains the processing and analysis code,
+the crossing and marker geometries (`data/processed/*.csv`), the per-attempt
+measurement records and statistics (`results/tables/`), and the blinded visual
+review: codebook, rating interface, event key and the two independent ratings with
+the consensus record (`validation/`).
+
+Not included:
+
+- Maxar imagery and image chips derived from it (CC BY-NC 4.0). The tile inventory
+  and `scripts/04_download_tiles.py` retrieve the inputs from the public release, and
+  `scripts/09_build_jobs.py` rebuilds the chips. The images of the blinded gallery are
+  regenerated with `scripts/44_blind_gallery.py`.
+- Third-party code, which should be obtained from its sources and placed in `external/`:
+  the pansharpening toolbox of Vivone et al. (2021, 2021 release), Z-PNN
+  (github.com/matciotola/Z-PNN) and Lambda-PNN (github.com/matciotola/Lambda-PNN).
+- Raw downloads (USGS field data release, OpenStreetMap extract), which the numbered
+  scripts download.
+
+Python packages are listed in `requirements.txt`.
+
+## Layout
+
+```
+data/raw/            downloaded inputs (Maxar ARD tiles, catalogue, USGS field data, OSM roads)
+data/processed/      tile inventory, site selection, chips (.mat), fused results
+external/            third-party code: Vivone et al. (2021) MATLAB toolbox, Z-PNN (Ciotola et al., 2022), Lambda-PNN
+matlab/              toolbox drivers: reduced-resolution inputs, fusion, quality indices
+src/                 Python modules: offset estimator, chip extraction, synthetic dislocation, Z-PNN wrapper
+scripts/             numbered processing steps (00-36) and helpers (9x: references, style audit)
+tests/               synthetic tests of the offset estimator
+results/tables/      analysis tables (CSV)
+results/figures/     manuscript figures (PDF/PNG)
+manuscript/          LaTeX source (elsarticle), verified BibTeX
+```
+
+## Processing order
+
+| Step | Script | Purpose |
+|---|---|---|
+| 1 | `scripts/01_select_tiles.py` | ARD tiles with separate PAN and MS assets over the field area |
+| 2 | `scripts/03_get_osm_roads.py` | OSM roads (candidate locations only) |
+| 3 | `scripts/04_download_tiles.py` | download PAN/MS/visual/mask assets (MD5 logged) |
+| 4 | `scripts/06_select_sites.py` | a priori field-site selection and image coverage |
+| 5 | `scripts/09_build_jobs.py` | field chips and controlled-dislocation chips (k = 0..3 MS pixels) |
+| 6 | `scripts/run_pipeline.ps1` | reduced-resolution inputs (MATLAB), Z-PNN (GPU), toolbox fusion and indices (MATLAB), offset measurement |
+| 7 | `scripts/13_analysis.py` | statistics |
+| 8 | `scripts/14_*.py`–`17_*.py` | figures |
+| 9 | `scripts/19_rebuild_vis.py` | vendor RGB area-averaged onto the PAN grid |
+| 10 | `scripts/21_manifest.py` | STAC metadata manifest of tiles and acquisitions |
+| 11 | `scripts/22_registration.py` | residual PAN–MS registration (phase correlation) |
+| 12 | `scripts/run_rr_fraction.ps1` (`matlab/rr_fraction.m`, `scripts/23_rr_fraction.py`) | reduced-scale fractional-phase and misregistration experiment |
+| 13 | `scripts/24_zpnn_ablation.py` | Z-PNN iteration and seed ablation |
+| 14 | `scripts/25_field_sensitivity.py` | field aperture and position sensitivity |
+| 15 | `matlab/quality_ext.m` | quality indices on 8-band, 7-band and RGB sets; stabilised MTF-GLP-HPM |
+| 16 | `scripts/27_rr_analysis.py`, then `scripts/26_analysis_v2.py` | failure-aware statistics (results/tables/v2) |
+| 17 | `scripts/30_*.py`–`36_*.py` | revised figures and LaTeX tables |
+| 19 | `scripts/run_robustness.ps1` (`matlab/rr_side.m`, `matlab/fuse_full.m`, `scripts/37_robustness.py`) | fault-side misregistration, intensity definitions, edge-free estimator (`src/offset_xcorr.py`) |
+| 20 | `scripts/25_field_sensitivity.py A` | field aperture sensitivity |
+| 21 | `scripts/38_review2_stats.py`, `scripts/39_robust_analysis.py` | deviation classes, equivalence margins, crossing-balanced errors, extended quality–task models, robustness summaries |
+| 22 | `scripts/40_fig_review2.py`, `scripts/41_supp_tables.py`, `scripts/42_fig_v3.py`, `scripts/43_fig_gallery.py` | revised result figures and supplementary tables (`manuscript/supplementary.tex`) |
+| 23 | `scripts/44_blind_gallery.py` | blinded, randomly coded image pairs of the 94 large deviations (`validation/blind_gallery/`, images not redistributed) and the key `validation/gallery_blind_key.csv` |
+| 24 | `validation/blind_gallery/index.html` | local rating interface; each rater exports a CSV to `validation/ratings/`, disagreements are resolved in its consensus mode (codebook: `validation/adjudication_codebook_en.md`) |
+| 25 | `scripts/45_adjudication_stats.py`, `scripts/46_success_bootstrap.py` | agreement, Cohen's kappa, proxy validity with crossing-cluster intervals and the LaTeX values for Table S15; bootstrap check of the success contrasts |
+| 25b | `scripts/47_review5_checks.py` | paired misregistration change, absolute RR error, within-crossing quality models, acquisition sensitivity, estimator agreement, parallax angles |
+| 25c | `matlab/hpm_stab_fr.m`, `scripts/48_hpm_stabilised.py` | MTF-GLP-HPM with the ratio inputs floored at 1e-4: fusion, offsets and paired comparison with the unmodified method |
+| 25d | `matlab/rr_gridphase.m`, `scripts/49_rr_gridphase.py` | reduced-scale experiment with the MS grid phase varied at a fixed translation (stages: list, zpnn, measure, analyse) |
+| 25e | `src/lambda_pnn_run.py`, `scripts/50_lambda_pnn.py` | Lambda-PNN (Ciotola et al.) with published weights and target adaptation as an additional product (stages: fuse, measure, analyse) |
+| 25f | `scripts/51_supp_gridphase_lpnn.py` | LaTeX rows of Tables S16 (grid phase), S17 (Lambda-PNN) and S18 (paired uniform misregistration) |
+| 25g | `scripts/52_field_grid_convergence.py` | field comparison repeated with field angles converted from true north to UTM grid north |
+| 26 | `scripts/90_verify_refs.py`, `92_make_bib.py`, `93_style_audit.py`, `manuscript/build.ps1` | Crossref verification, bibliography, style audit, PDF build |
+
+The offset estimator (`src/offset.py`) is deterministic; all its parameters are
+fixed in `PARAMS` and copied to `results/tables/offset_params.json`.
+
+## Software
+
+Python 3.13 (numpy, scipy, pandas, rasterio, shapely, pyproj, statsmodels,
+matplotlib, PyTorch 2.7 with CUDA 11.8), MATLAB R2025a (Image Processing and
+Signal Processing toolboxes). Two compatibility edits were made to third-party
+code, neither of which changes an algorithm: a NumPy 2 scalar conversion in
+`external/zpnn/Z-PNN-master/spectral_tools.py`, and the use of the toolbox's own
+`ndwt2_working` functions (2021 release) in place of the removed MATLAB `ndwt2`.
+
+## Data licences
+
+Maxar Open Data: CC BY-NC 4.0. USGS data release (DuRoss et al., 2024): public
+domain. OpenStreetMap: ODbL. Raw imagery is not redistributed here; the tile
+inventory and download script reproduce the inputs.
