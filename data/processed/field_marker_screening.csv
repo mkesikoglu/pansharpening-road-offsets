@@ -1,0 +1,22 @@
+ID,marker,include,mode,az_init_N,az_init_S,screen_note
+1,M01,1,band,101,101,gravel road clearly visible on both sides
+2,M01,1,band,101,101,repeat GNSS measurement of marker M01
+3,M03,1,band,135,135,field/ditch boundary visible as bright line on both sides
+4,M03,1,band,135,135,repeat GNSS measurement of marker M03
+5,M05,1,band,125,125,canal visible; curved trace and road junction near the crossing
+6,M06,1,band,121,121,minor ditch visible as dark line
+7,M07,1,band,115,115,irrigation ditch visible as dark line
+8,M07,1,band,115,115,repeat GNSS measurement of marker M07
+10,M10,0,,,,0.5 m wide wall not resolved on PAN (tree cover)
+11,M11,0,,,,wall not identifiable among buildings
+18,M18,1,band,21,21,dirt road partly under tree canopy
+19,M18,1,band,21,21,repeat GNSS measurement of marker M18
+43,M43,1,edge,330,330,eastern edge of poppy field
+44,M44,1,edge,330,330,western edge of poppy field
+45,M45,1,band,150,150,irrigation ditch within wheat field; low contrast
+56,M56,1,edge,130,130,field edge
+57,M57,0,,,,onion rows (periodic marker)
+58,M57,0,,,,onion rows (periodic marker)
+59,M57,0,,,,onion rows (periodic marker)
+60,M60,1,edge,135,130,chickpea/poppy field edge
+61,M61,1,edge,15,15,field edge with low contrast near hummocky fault zone
