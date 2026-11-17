@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article and this repository."
+title: "Task-based evaluation of pansharpening for automated road-offset measurement after the 2023 Kahramanmaraş earthquakes: code and data"
+type: software
+license: CC-BY-NC-4.0
+repository-code: "https://github.com/mkesikoglu/pansharpening-road-offsets"
+authors:
+  - family-names: "Karkınlı"
+    given-names: "Ahmet Emin"
+    orcid: "https://orcid.org/0000-0001-7216-6251"
+    email: "akarkinli@ohu.edu.tr"
+    affiliation: "Niğde Ömer Halisdemir University"
+  - family-names: "Kesikoglu"
+    given-names: "Mustafa Hayri"
+    orcid: "https://orcid.org/0000-0001-5199-0815"
+    email: "hayri.kesikoglu@usak.edu.tr"
+    affiliation: "Uşak University"
+keywords:
+  - pansharpening
+  - offset measurement
+  - surface rupture
+  - WorldView
+  - Kahramanmaraş earthquake sequence
+# TODO after acceptance: add the article DOI (preferred-citation: doi, volume, pages, year)
+# and the archive DOI of this repository (identifiers).
+preferred-citation:
+  type: article
+  title: "Task-based evaluation of pansharpening for automated road-offset measurement after the 2023 Kahramanmaraş earthquakes"
+  authors:
+    - family-names: "Karkınlı"
+      given-names: "Ahmet Emin"
+    - family-names: "Kesikoglu"
+      given-names: "Mustafa Hayri"
+  journal: "ISPRS Journal of Photogrammetry and Remote Sensing"
+  notes: "Submitted manuscript"

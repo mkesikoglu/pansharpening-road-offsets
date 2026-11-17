@@ -94,3 +94,17 @@ code, neither of which changes an algorithm: a NumPy 2 scalar conversion in
 Maxar Open Data: CC BY-NC 4.0. USGS data release (DuRoss et al., 2024): public
 domain. OpenStreetMap: ODbL. Raw imagery is not redistributed here; the tile
 inventory and download script reproduce the inputs.
+
+## Licence and citation
+
+Code, data, tables and documentation in this repository are released under the
+Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0,
+see `LICENSE`). Academic and other non-commercial use is permitted with attribution;
+please cite the associated article and this repository (`CITATION.cff`). Commercial
+use requires written permission from the authors:
+
+- Ahmet Emin Karkınlı: akarkinli@ohu.edu.tr, karkinli@gmail.com
+- Mustafa Hayri Kesikoglu: hayri.kesikoglu@usak.edu.tr, mkesikoglu@gmail.com
+
+Geometries derived from OpenStreetMap remain under the ODbL; the USGS field data
+are in the public domain.
