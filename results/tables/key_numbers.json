@@ -1,0 +1,981 @@
+{
+ "n_controlled_chips": 57,
+ "n_crossings": 57,
+ "n_field_jobs": 23,
+ "n_jobs": 251,
+ "n_field_candidates": 21,
+ "n_field_used": 16,
+ "n_field_markers_used": 12,
+ "n_quality_chips": 80,
+ "hpm_ergas_gt100": 48,
+ "quality_median": {
+  "Q2n": {
+   "AWLP": 0.788,
+   "BDSD_PC": 0.788,
+   "EXP": 0.692,
+   "GSA": 0.789,
+   "MTF_GLP_HPM": 0.534,
+   "ZPNN": 0.737
+  },
+  "SAM": {
+   "AWLP": 5.759,
+   "BDSD_PC": 3.394,
+   "EXP": 2.688,
+   "GSA": 3.349,
+   "MTF_GLP_HPM": 3.704,
+   "ZPNN": 3.119
+  },
+  "ERGAS": {
+   "AWLP": 12.497,
+   "BDSD_PC": 11.24,
+   "EXP": 13.264,
+   "GSA": 11.35,
+   "MTF_GLP_HPM": 128.995,
+   "ZPNN": 13.943
+  },
+  "SCC": {
+   "AWLP": 0.851,
+   "BDSD_PC": 0.904,
+   "EXP": 0.777,
+   "GSA": 0.881,
+   "MTF_GLP_HPM": 0.72,
+   "ZPNN": 0.905
+  },
+  "SAM_road": {
+   "AWLP": 13.08,
+   "BDSD_PC": 6.86,
+   "EXP": 5.428,
+   "GSA": 7.28,
+   "MTF_GLP_HPM": 7.061,
+   "ZPNN": 5.719
+  },
+  "SAM_bg": {
+   "AWLP": 5.556,
+   "BDSD_PC": 3.244,
+   "EXP": 2.61,
+   "GSA": 3.071,
+   "MTF_GLP_HPM": 3.485,
+   "ZPNN": 3.027
+  },
+  "D_lambda": {
+   "AWLP": 0.045,
+   "BDSD_PC": 0.167,
+   "EXP": 0.044,
+   "GSA": 0.144,
+   "MTF_GLP_HPM": 0.294,
+   "ZPNN": 0.314
+  },
+  "D_s": {
+   "AWLP": 0.094,
+   "BDSD_PC": 0.126,
+   "EXP": 0.062,
+   "GSA": 0.117,
+   "MTF_GLP_HPM": 0.136,
+   "ZPNN": 0.136
+  },
+  "HQNR": {
+   "AWLP": 0.867,
+   "BDSD_PC": 0.709,
+   "EXP": 0.892,
+   "GSA": 0.729,
+   "MTF_GLP_HPM": 0.625,
+   "ZPNN": 0.595
+  }
+ },
+ "controlled": {
+  "PAN": {
+   "measurable": 50.9,
+   "mae": 0.55,
+   "rmse": 2.33,
+   "p_gt1": 28.7,
+   "mae_k0": 0.67
+  },
+  "EXP": {
+   "measurable": 63.7,
+   "mae": 0.85,
+   "rmse": 2.12,
+   "p_gt1": 44.0,
+   "mae_k0": 0.88
+  },
+  "GSA": {
+   "measurable": 55.0,
+   "mae": 0.66,
+   "rmse": 1.5,
+   "p_gt1": 34.0,
+   "mae_k0": 0.66
+  },
+  "BDSD_PC": {
+   "measurable": 52.6,
+   "mae": 0.59,
+   "rmse": 2.12,
+   "p_gt1": 36.7,
+   "mae_k0": 0.71
+  },
+  "MTF_GLP_HPM": {
+   "measurable": 45.6,
+   "mae": 0.54,
+   "rmse": 1.54,
+   "p_gt1": 29.5,
+   "mae_k0": 0.47
+  },
+  "AWLP": {
+   "measurable": 56.1,
+   "mae": 0.64,
+   "rmse": 1.82,
+   "p_gt1": 34.4,
+   "mae_k0": 0.62
+  },
+  "ZPNN": {
+   "measurable": 50.9,
+   "mae": 0.42,
+   "rmse": 0.91,
+   "p_gt1": 24.1,
+   "mae_k0": 0.42
+  },
+  "VIS": {
+   "measurable": 44.0,
+   "mae": 0.72,
+   "rmse": 2.29,
+   "p_gt1": 41.9,
+   "mae_k0": 0.49
+  }
+ },
+ "paired": {
+  "EXP": {
+   "n": 77,
+   "d_median": 0.3346,
+   "d_lo": -0.0211,
+   "d_hi": 0.463,
+   "frac_better": 33.7662,
+   "p_wilcoxon": 0.0003,
+   "p_holm": 0.0022
+  },
+  "GSA": {
+   "n": 78,
+   "d_median": 0.0044,
+   "d_lo": -0.0287,
+   "d_hi": 0.0608,
+   "frac_better": 44.8718,
+   "p_wilcoxon": 0.7594,
+   "p_holm": 1.0
+  },
+  "BDSD_PC": {
+   "n": 78,
+   "d_median": 0.0029,
+   "d_lo": -0.0322,
+   "d_hi": 0.1516,
+   "frac_better": 44.8718,
+   "p_wilcoxon": 0.4357,
+   "p_holm": 1.0
+  },
+  "MTF_GLP_HPM": {
+   "n": 69,
+   "d_median": 0.0068,
+   "d_lo": -0.1218,
+   "d_hi": 0.1158,
+   "frac_better": 49.2754,
+   "p_wilcoxon": 0.9642,
+   "p_holm": 1.0
+  },
+  "AWLP": {
+   "n": 77,
+   "d_median": 0.09,
+   "d_lo": -0.0012,
+   "d_hi": 0.2168,
+   "frac_better": 35.0649,
+   "p_wilcoxon": 0.0785,
+   "p_holm": 0.3926
+  },
+  "ZPNN": {
+   "n": 76,
+   "d_median": -0.0008,
+   "d_lo": -0.1136,
+   "d_hi": 0.0746,
+   "frac_better": 50.0,
+   "p_wilcoxon": 0.5075,
+   "p_holm": 1.0
+  },
+  "VIS": {
+   "n": 70,
+   "d_median": 0.0991,
+   "d_lo": 0.0174,
+   "d_hi": 0.1863,
+   "frac_better": 32.8571,
+   "p_wilcoxon": 0.0019,
+   "p_holm": 0.0114
+  }
+ },
+ "shift": {
+  "EXP": {
+   "n": 105,
+   "med_abs_shift": 0.368,
+   "lo": 0.217,
+   "hi": 0.577,
+   "p90_abs_shift": 3.112,
+   "frac_gt_05": 36.19
+  },
+  "GSA": {
+   "n": 106,
+   "med_abs_shift": 0.141,
+   "lo": 0.059,
+   "hi": 0.484,
+   "p90_abs_shift": 2.321,
+   "frac_gt_05": 32.075
+  },
+  "BDSD_PC": {
+   "n": 108,
+   "med_abs_shift": 0.255,
+   "lo": 0.086,
+   "hi": 0.531,
+   "p90_abs_shift": 3.239,
+   "frac_gt_05": 35.185
+  },
+  "MTF_GLP_HPM": {
+   "n": 92,
+   "med_abs_shift": 0.211,
+   "lo": 0.122,
+   "hi": 0.346,
+   "p90_abs_shift": 1.83,
+   "frac_gt_05": 29.348
+  },
+  "AWLP": {
+   "n": 106,
+   "med_abs_shift": 0.443,
+   "lo": 0.207,
+   "hi": 0.686,
+   "p90_abs_shift": 2.314,
+   "frac_gt_05": 42.453
+  },
+  "ZPNN": {
+   "n": 105,
+   "med_abs_shift": 0.124,
+   "lo": 0.076,
+   "hi": 0.227,
+   "p90_abs_shift": 2.183,
+   "frac_gt_05": 28.571
+  },
+  "VIS": {
+   "n": 95,
+   "med_abs_shift": 0.205,
+   "lo": 0.108,
+   "hi": 0.285,
+   "p90_abs_shift": 1.663,
+   "frac_gt_05": 21.053
+  }
+ },
+ "lmm": {
+  "EXP": {
+   "ratio": 1.425,
+   "lo": 1.104,
+   "hi": 1.838,
+   "p": 0.006,
+   "p_holm": 0.045
+  },
+  "GSA": {
+   "ratio": 1.086,
+   "lo": 0.84,
+   "hi": 1.402,
+   "p": 0.529,
+   "p_holm": 0.801
+  },
+  "BDSD_PC": {
+   "ratio": 1.259,
+   "lo": 0.971,
+   "hi": 1.633,
+   "p": 0.082,
+   "p_holm": 0.412
+  },
+  "MTF_GLP_HPM": {
+   "ratio": 1.305,
+   "lo": 0.997,
+   "hi": 1.708,
+   "p": 0.052,
+   "p_holm": 0.315
+  },
+  "AWLP": {
+   "ratio": 1.22,
+   "lo": 0.943,
+   "hi": 1.578,
+   "p": 0.129,
+   "p_holm": 0.518
+  },
+  "ZPNN": {
+   "ratio": 0.894,
+   "lo": 0.688,
+   "hi": 1.161,
+   "p": 0.4,
+   "p_holm": 0.801
+  },
+  "VIS": {
+   "ratio": 1.222,
+   "lo": 0.931,
+   "hi": 1.605,
+   "p": 0.148,
+   "p_holm": 0.518
+  }
+ },
+ "rho": {
+  "Q2n": {
+   "n_chips": 34,
+   "rho_mean": -0.021,
+   "lo": -0.158,
+   "hi": 0.121
+  },
+  "SAM": {
+   "n_chips": 34,
+   "rho_mean": 0.013,
+   "lo": -0.129,
+   "hi": 0.166
+  },
+  "ERGAS": {
+   "n_chips": 34,
+   "rho_mean": -0.083,
+   "lo": -0.254,
+   "hi": 0.09
+  },
+  "SCC": {
+   "n_chips": 34,
+   "rho_mean": 0.132,
+   "lo": -0.018,
+   "hi": 0.282
+  },
+  "HQNR": {
+   "n_chips": 34,
+   "rho_mean": -0.089,
+   "lo": -0.26,
+   "hi": 0.09
+  },
+  "D_lambda": {
+   "n_chips": 34,
+   "rho_mean": -0.1,
+   "lo": -0.267,
+   "hi": 0.064
+  },
+  "D_s": {
+   "n_chips": 34,
+   "rho_mean": -0.053,
+   "lo": -0.247,
+   "hi": 0.137
+  }
+ },
+ "by_acq": {
+  "AWLP": {
+   "WV-2 08 Feb": 0.22,
+   "WV-2 11 Feb": 0.61,
+   "WV-2 11 Mar": 0.21,
+   "WV-2 28 Feb": 0.67,
+   "WV-3 28 Feb": 0.82
+  },
+  "BDSD_PC": {
+   "WV-2 08 Feb": 0.51,
+   "WV-2 11 Feb": 0.3,
+   "WV-2 11 Mar": NaN,
+   "WV-2 28 Feb": 0.64,
+   "WV-3 28 Feb": 0.71
+  },
+  "EXP": {
+   "WV-2 08 Feb": 1.24,
+   "WV-2 11 Feb": 1.65,
+   "WV-2 11 Mar": 0.47,
+   "WV-2 28 Feb": 0.71,
+   "WV-3 28 Feb": 0.85
+  },
+  "GSA": {
+   "WV-2 08 Feb": 0.65,
+   "WV-2 11 Feb": 0.3,
+   "WV-2 11 Mar": NaN,
+   "WV-2 28 Feb": 0.24,
+   "WV-3 28 Feb": 0.88
+  },
+  "MTF_GLP_HPM": {
+   "WV-2 08 Feb": 1.08,
+   "WV-2 11 Feb": 0.33,
+   "WV-2 11 Mar": NaN,
+   "WV-2 28 Feb": 0.64,
+   "WV-3 28 Feb": 0.76
+  },
+  "PAN": {
+   "WV-2 08 Feb": 0.4,
+   "WV-2 11 Feb": 0.61,
+   "WV-2 11 Mar": NaN,
+   "WV-2 28 Feb": 0.95,
+   "WV-3 28 Feb": 0.47
+  },
+  "VIS": {
+   "WV-2 08 Feb": 0.24,
+   "WV-2 11 Feb": 0.96,
+   "WV-2 11 Mar": NaN,
+   "WV-2 28 Feb": 1.06,
+   "WV-3 28 Feb": 0.72
+  },
+  "ZPNN": {
+   "WV-2 08 Feb": 0.42,
+   "WV-2 11 Feb": 0.32,
+   "WV-2 11 Mar": NaN,
+   "WV-2 28 Feb": 0.4,
+   "WV-3 28 Feb": 0.81
+  }
+ },
+ "units_by_acq": {
+  "WV-2 08 Feb": 8,
+  "WV-2 11 Feb": 11,
+  "WV-2 11 Mar": 1,
+  "WV-2 28 Feb": 9,
+  "WV-3 28 Feb": 15
+ },
+ "runtime": {
+  "GSA": 1.17,
+  "BDSD_PC": 0.82,
+  "MTF_GLP_HPM": 1.73,
+  "AWLP": 3.7,
+  "ZPNN": 55.87
+ },
+ "sensitivity": [
+  {
+   "min_cnr": 2.0,
+   "kind": "controlled",
+   "product": "AWLP",
+   "measurable": 67.98,
+   "n_ok": 155,
+   "med_ae": 0.67,
+   "p_gt_1": 38.71
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "controlled",
+   "product": "BDSD_PC",
+   "measurable": 64.04,
+   "n_ok": 146,
+   "med_ae": 0.73,
+   "p_gt_1": 39.73
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "controlled",
+   "product": "EXP",
+   "measurable": 73.68,
+   "n_ok": 168,
+   "med_ae": 0.87,
+   "p_gt_1": 45.24
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "controlled",
+   "product": "GSA",
+   "measurable": 62.28,
+   "n_ok": 142,
+   "med_ae": 0.74,
+   "p_gt_1": 35.92
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "controlled",
+   "product": "MTF_GLP_HPM",
+   "measurable": 63.16,
+   "n_ok": 144,
+   "med_ae": 0.76,
+   "p_gt_1": 38.89
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "controlled",
+   "product": "PAN",
+   "measurable": 61.84,
+   "n_ok": 141,
+   "med_ae": 0.79,
+   "p_gt_1": 38.3
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "controlled",
+   "product": "VIS",
+   "measurable": 60.71,
+   "n_ok": 136,
+   "med_ae": 0.77,
+   "p_gt_1": 44.12
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "controlled",
+   "product": "ZPNN",
+   "measurable": 64.47,
+   "n_ok": 147,
+   "med_ae": 0.56,
+   "p_gt_1": 38.78
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "field",
+   "product": "AWLP",
+   "measurable": 16.67,
+   "n_ok": 6,
+   "med_ae": 1.34,
+   "p_gt_1": 66.67
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "field",
+   "product": "BDSD_PC",
+   "measurable": 19.44,
+   "n_ok": 7,
+   "med_ae": 1.25,
+   "p_gt_1": 85.71
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "field",
+   "product": "EXP",
+   "measurable": 27.78,
+   "n_ok": 10,
+   "med_ae": 1.99,
+   "p_gt_1": 60.0
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "field",
+   "product": "GSA",
+   "measurable": 19.44,
+   "n_ok": 7,
+   "med_ae": 1.3,
+   "p_gt_1": 71.43
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "field",
+   "product": "MTF_GLP_HPM",
+   "measurable": 19.44,
+   "n_ok": 7,
+   "med_ae": 1.38,
+   "p_gt_1": 85.71
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "field",
+   "product": "PAN",
+   "measurable": 41.67,
+   "n_ok": 15,
+   "med_ae": 1.82,
+   "p_gt_1": 80.0
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "field",
+   "product": "VIS",
+   "measurable": 19.44,
+   "n_ok": 7,
+   "med_ae": 1.11,
+   "p_gt_1": 57.14
+  },
+  {
+   "min_cnr": 2.0,
+   "kind": "field",
+   "product": "ZPNN",
+   "measurable": 16.67,
+   "n_ok": 6,
+   "med_ae": 1.28,
+   "p_gt_1": 66.67
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "controlled",
+   "product": "AWLP",
+   "measurable": 57.46,
+   "n_ok": 131,
+   "med_ae": 0.62,
+   "p_gt_1": 34.35
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "controlled",
+   "product": "BDSD_PC",
+   "measurable": 54.82,
+   "n_ok": 125,
+   "med_ae": 0.63,
+   "p_gt_1": 36.8
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "controlled",
+   "product": "EXP",
+   "measurable": 64.91,
+   "n_ok": 148,
+   "med_ae": 0.85,
+   "p_gt_1": 44.59
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "controlled",
+   "product": "GSA",
+   "measurable": 55.7,
+   "n_ok": 127,
+   "med_ae": 0.66,
+   "p_gt_1": 33.86
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "controlled",
+   "product": "MTF_GLP_HPM",
+   "measurable": 45.18,
+   "n_ok": 103,
+   "med_ae": 0.53,
+   "p_gt_1": 30.1
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "controlled",
+   "product": "PAN",
+   "measurable": 52.19,
+   "n_ok": 119,
+   "med_ae": 0.6,
+   "p_gt_1": 28.57
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "controlled",
+   "product": "VIS",
+   "measurable": 45.09,
+   "n_ok": 101,
+   "med_ae": 0.68,
+   "p_gt_1": 38.61
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "controlled",
+   "product": "ZPNN",
+   "measurable": 51.32,
+   "n_ok": 117,
+   "med_ae": 0.42,
+   "p_gt_1": 24.79
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "field",
+   "product": "AWLP",
+   "measurable": 16.67,
+   "n_ok": 6,
+   "med_ae": 1.34,
+   "p_gt_1": 66.67
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "field",
+   "product": "BDSD_PC",
+   "measurable": 11.11,
+   "n_ok": 4,
+   "med_ae": 1.09,
+   "p_gt_1": 50.0
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "field",
+   "product": "EXP",
+   "measurable": 16.67,
+   "n_ok": 6,
+   "med_ae": 1.24,
+   "p_gt_1": 50.0
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "field",
+   "product": "GSA",
+   "measurable": 16.67,
+   "n_ok": 6,
+   "med_ae": 1.13,
+   "p_gt_1": 66.67
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "field",
+   "product": "MTF_GLP_HPM",
+   "measurable": 13.89,
+   "n_ok": 5,
+   "med_ae": 1.29,
+   "p_gt_1": 80.0
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "field",
+   "product": "PAN",
+   "measurable": 19.44,
+   "n_ok": 7,
+   "med_ae": 1.47,
+   "p_gt_1": 71.43
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "field",
+   "product": "VIS",
+   "measurable": 13.89,
+   "n_ok": 5,
+   "med_ae": 1.15,
+   "p_gt_1": 60.0
+  },
+  {
+   "min_cnr": 3.0,
+   "kind": "field",
+   "product": "ZPNN",
+   "measurable": 16.67,
+   "n_ok": 6,
+   "med_ae": 1.31,
+   "p_gt_1": 66.67
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "controlled",
+   "product": "AWLP",
+   "measurable": 52.63,
+   "n_ok": 120,
+   "med_ae": 0.56,
+   "p_gt_1": 31.67
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "controlled",
+   "product": "BDSD_PC",
+   "measurable": 48.25,
+   "n_ok": 110,
+   "med_ae": 0.57,
+   "p_gt_1": 32.73
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "controlled",
+   "product": "EXP",
+   "measurable": 56.14,
+   "n_ok": 128,
+   "med_ae": 0.78,
+   "p_gt_1": 39.06
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "controlled",
+   "product": "GSA",
+   "measurable": 50.44,
+   "n_ok": 115,
+   "med_ae": 0.5,
+   "p_gt_1": 28.7
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "controlled",
+   "product": "MTF_GLP_HPM",
+   "measurable": 37.72,
+   "n_ok": 86,
+   "med_ae": 0.57,
+   "p_gt_1": 27.91
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "controlled",
+   "product": "PAN",
+   "measurable": 46.49,
+   "n_ok": 106,
+   "med_ae": 0.45,
+   "p_gt_1": 22.64
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "controlled",
+   "product": "VIS",
+   "measurable": 27.68,
+   "n_ok": 62,
+   "med_ae": 0.38,
+   "p_gt_1": 27.42
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "controlled",
+   "product": "ZPNN",
+   "measurable": 43.86,
+   "n_ok": 100,
+   "med_ae": 0.4,
+   "p_gt_1": 24.0
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "field",
+   "product": "AWLP",
+   "measurable": 11.11,
+   "n_ok": 4,
+   "med_ae": 0.9,
+   "p_gt_1": 50.0
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "field",
+   "product": "BDSD_PC",
+   "measurable": 11.11,
+   "n_ok": 4,
+   "med_ae": 1.25,
+   "p_gt_1": 75.0
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "field",
+   "product": "EXP",
+   "measurable": 16.67,
+   "n_ok": 6,
+   "med_ae": 1.24,
+   "p_gt_1": 50.0
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "field",
+   "product": "GSA",
+   "measurable": 11.11,
+   "n_ok": 4,
+   "med_ae": 1.17,
+   "p_gt_1": 75.0
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "field",
+   "product": "MTF_GLP_HPM",
+   "measurable": 8.33,
+   "n_ok": 3,
+   "med_ae": 1.22,
+   "p_gt_1": 66.67
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "field",
+   "product": "PAN",
+   "measurable": 5.56,
+   "n_ok": 2,
+   "med_ae": 1.14,
+   "p_gt_1": 50.0
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "field",
+   "product": "VIS",
+   "measurable": 5.56,
+   "n_ok": 2,
+   "med_ae": 1.24,
+   "p_gt_1": 100.0
+  },
+  {
+   "min_cnr": 4.0,
+   "kind": "field",
+   "product": "ZPNN",
+   "measurable": 11.11,
+   "n_ok": 4,
+   "med_ae": 1.31,
+   "p_gt_1": 75.0
+  }
+ ],
+ "field_measurable": {
+  "AWLP": 16.7,
+  "BDSD_PC": 11.1,
+  "EXP": 16.7,
+  "GSA": 16.7,
+  "MTF_GLP_HPM": 13.9,
+  "PAN": 19.4,
+  "VIS": 13.9,
+  "ZPNN": 16.7
+ },
+ "field_n_ok": {
+  "AWLP": 6,
+  "BDSD_PC": 4,
+  "EXP": 6,
+  "GSA": 6,
+  "MTF_GLP_HPM": 5,
+  "PAN": 7,
+  "VIS": 5,
+  "ZPNN": 6
+ },
+ "field_obs_any": [
+  1,
+  2,
+  4,
+  6,
+  7,
+  8
+ ],
+ "M01_range": [
+  2.41,
+  4.32
+ ],
+ "M01_by_acq_PAN": {
+  "1 / 10300100E291D100": 3.54,
+  "1 / 10300500D9F8D200": 3.17,
+  "2 / 10300100E291D100": 3.9,
+  "2 / 10300500D9F8D200": 3.83
+ },
+ "M01_spread_products": {
+  "1 / 10300100E291D100": 0.45,
+  "1 / 10300100E3154100": 0.32,
+  "1 / 10300500D9F8D200": 0.79,
+  "2 / 10300100E291D100": 0.36,
+  "2 / 10300100E3154100": 0.29,
+  "2 / 10300500D9F8D200": 0.84
+ },
+ "parallax": [
+  {
+   "ID": 1,
+   "marker": "M01",
+   "catalog_id": "10300100E291D100",
+   "V": 0.2,
+   "ScarpFaceDir": "North",
+   "incidence": 36.99,
+   "view_az": 270.3,
+   "strike": 234.0,
+   "dH_parallax": 0.12
+  },
+  {
+   "ID": 1,
+   "marker": "M01",
+   "catalog_id": "10300100E3154100",
+   "V": 0.2,
+   "ScarpFaceDir": "North",
+   "incidence": 34.19,
+   "view_az": 11.43,
+   "strike": 234.0,
+   "dH_parallax": 0.1
+  },
+  {
+   "ID": 1,
+   "marker": "M01",
+   "catalog_id": "10300500D9F8D200",
+   "V": 0.2,
+   "ScarpFaceDir": "North",
+   "incidence": 46.64,
+   "view_az": 273.6,
+   "strike": 234.0,
+   "dH_parallax": 0.16
+  },
+  {
+   "ID": 18,
+   "marker": "M18",
+   "catalog_id": "10300100E291D100",
+   "V": 1.06,
+   "ScarpFaceDir": "North",
+   "incidence": 36.99,
+   "view_az": 270.3,
+   "strike": 245.0,
+   "dH_parallax": 0.72
+  },
+  {
+   "ID": 18,
+   "marker": "M18",
+   "catalog_id": "10300100E3154100",
+   "V": 1.06,
+   "ScarpFaceDir": "North",
+   "incidence": 34.19,
+   "view_az": 11.43,
+   "strike": 245.0,
+   "dH_parallax": 0.43
+  },
+  {
+   "ID": 56,
+   "marker": "M56",
+   "catalog_id": "1040010082B6D600",
+   "V": 1.07,
+   "ScarpFaceDir": "North",
+   "incidence": 49.0,
+   "view_az": 291.08,
+   "strike": 237.0,
+   "dH_parallax": 0.72
+  }
+ ]
+}

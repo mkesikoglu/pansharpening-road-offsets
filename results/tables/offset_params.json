@@ -1,0 +1,22 @@
+{
+ "step_t": 1.0,
+ "length": 40.0,
+ "t_min_floor": 5.0,
+ "dw": 0.25,
+ "strip": 1.0,
+ "sigma_d": 0.5,
+ "search_u": 15.0,
+ "max_offset": 15.0,
+ "width_min": 1.5,
+ "width_max": 25.0,
+ "width_tol": 0.3,
+ "az_search": 10.0,
+ "az_step": 1.0,
+ "rel_cnr": 0.5,
+ "edge_tol": 1.5,
+ "min_cnr": 3.0,
+ "min_valid": 0.5,
+ "max_rmse": 1.5,
+ "huber_c": 1.345,
+ "n_iter": 2
+}
